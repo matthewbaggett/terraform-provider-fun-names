@@ -1,4 +1,4 @@
-module github.com/terraform-providers/terraform-provider-random
+module github.com/matthewbaggett/terraform-provider-fun-names
 
 go 1.20
 
