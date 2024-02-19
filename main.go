@@ -10,7 +10,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 
-	"github.com/terraform-providers/terraform-provider-random/internal/provider"
+	"github.com/matthewbaggett/terraform-provider-fun-names/internal/provider"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	err := providerserver.Serve(context.Background(), provider.New, providerserver.ServeOpts{
-		Address:         "registry.terraform.io/hashicorp/random",
+		Address:         "registry.terraform.io/matthewbaggett/fun-names",
 		Debug:           debug,
 		ProtocolVersion: 5,
 	})

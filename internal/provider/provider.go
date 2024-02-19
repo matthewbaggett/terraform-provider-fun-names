@@ -1,6 +1,3 @@
-// Copyright (c) HashiCorp, Inc.
-// SPDX-License-Identifier: MPL-2.0
-
 package provider
 
 import (
@@ -20,7 +17,7 @@ var _ provider.Provider = (*randomProvider)(nil)
 type randomProvider struct{}
 
 func (p *randomProvider) Metadata(_ context.Context, _ provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "random"
+	resp.TypeName = "fun-names"
 }
 
 func (p *randomProvider) Schema(context.Context, provider.SchemaRequest, *provider.SchemaResponse) {
@@ -31,14 +28,7 @@ func (p *randomProvider) Configure(context.Context, provider.ConfigureRequest, *
 
 func (p *randomProvider) Resources(context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
-		NewIdResource,
-		NewBytesResource,
-		NewIntegerResource,
-		NewPasswordResource,
-		NewPetResource,
-		NewShuffleResource,
-		NewStringResource,
-		NewUuidResource,
+		NewCultureShipResource,
 	}
 }
 
